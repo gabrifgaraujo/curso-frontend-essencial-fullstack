@@ -3,9 +3,8 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
-import "highlight.js/styles/github-dark.css"; 
-import "../markdown-styles.css";
-import "../markdown-code.css";
+import "highlight.js/styles/github-dark.css";
+import "../markdown-styles.css"; // Seu CSS customizado para o conteúdo do markdown
 
 interface MarkdownProps {
   content: string;
@@ -13,7 +12,7 @@ interface MarkdownProps {
 
 const Markdown: React.FC<MarkdownProps> = ({ content }) => {
   return (
-    <div className="markdown-content prose prose-headings:text-blue-600 prose-a:text-sky-500 hover:prose-a:text-sky-700 prose-table:border-gray-200 max-w-none">
+    <div className="markdown-content">
       <ReactMarkdown
         rehypePlugins={[rehypeRaw, rehypeHighlight]}
         remarkPlugins={[remarkGfm]}

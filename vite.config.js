@@ -15,5 +15,5 @@ export default defineConfig({
       }
     }
   ],
-  base: "/curso-react/",
+  base: "/curso-frontend-essencial/",
 })
