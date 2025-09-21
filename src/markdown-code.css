@@ -1,111 +1,96 @@
-/* Container do markdown não deve causar scroll lateral na página */
+/* src/markdown-code.css - Estilo "Night Owl" (v1.1 - Seletores Corrigidos) */
+
+/* --- Container Geral --- */
 .markdown-content {
   max-width: 100%;
   overflow-x: hidden;
 }
 
-/* ====== BLOCO DE CÓDIGO ====== */
-.markdown-content .md-code-block {
-  /* visual editor-like */
-  background: #1e1e1e;
-  color: #d4d4d4;
-  border: 1px solid #2b2b2b;
-  border-radius: 12px;
-
-  /* espaçamento */
-  padding: 1rem 1.25rem;
-  margin: 1.25rem 0;
-
-  /* responsividade */
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-
-  /* rolagem horizontal local (não na página) */
-  overflow-x: auto;
-  overflow-y: hidden;
+/* --- Bloco de Código Principal (<pre>) --- */
+/* CORREÇÃO: O seletor agora é 'pre', a tag HTML para blocos de código. */
+.markdown-content pre {
+  background-color: #011627;
+  color: #d6deeb;
+  border: 1px solid #1d3b53;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+  margin: 1.5rem 0; /* Espaçamento controlado aqui */
+  position: relative;
+  font-family: "Fira Code", "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  overflow: auto;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
-
-  /* tipografia */
-  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.92rem;
-  line-height: 1.6;
-
-  /* melhora performance em mobile */
-  contain: layout paint;
 }
 
-/* o code dentro do bloco ocupa a largura do conteúdo,
-   permitindo scroll horizontal sem quebrar a página */
-.markdown-content .md-code-block > code {
+/* --- "Barra de Título" Falsa com Botões --- */
+/* CORREÇÃO: O seletor agora é 'pre::before'. */
+.markdown-content pre::before {
+  content: ' ';
   display: block;
-  white-space: pre;              /* mantém indentação/linhas */
-  word-break: normal;            /* não quebra tokens longos */
-  overflow-wrap: normal;
+  height: 2.5rem;
+  background-color: #0b253a;
+  border-bottom: 1px solid #1d3b53;
+  border-radius: 8px 8px 0 0;
+  background-image: 
+    radial-gradient(circle at 16px 18px, #ff5f56 5px, transparent 5px),
+    radial-gradient(circle at 36px 18px, #ffbd2e 5px, transparent 5px),
+    radial-gradient(circle at 56px 18px, #27c93f 5px, transparent 5px);
+  background-repeat: no-repeat;
+}
+
+/* --- Container do Código (<code> dentro de <pre>) --- */
+/* CORREÇÃO: O seletor agora é 'pre > code'. */
+.markdown-content pre > code {
+  display: block;
+  padding: 0 1.5rem 1.25rem 1.5rem;
+  white-space: pre;
   min-width: 100%;
-  width: max-content;            /* largura real do conteúdo para scroll */
+  width: max-content;
   tab-size: 2;
+  /* CORREÇÃO: Garante que o fundo do <code> seja transparente para mostrar o fundo do <pre>. */
+  background-color: transparent; 
 }
 
-/* Em telas pequenas, reduzimos sutilmente padding/tamanho da fonte */
-@media (max-width: 640px) {
-  .markdown-content .md-code-block {
-    padding: 0.85rem 0.9rem;
-    border-radius: 10px;
-    font-size: 0.88rem;
-    margin: 1rem 0;
-  }
+/* --- Estilização da Scrollbar --- */
+.markdown-content pre::-webkit-scrollbar {
+  height: 10px;
+  background-color: #011627;
+}
+.markdown-content pre::-webkit-scrollbar-thumb {
+  background-color: #1d3b53;
+  border-radius: 5px;
+  border: 2px solid #011627;
 }
 
-/* Scrollbar discreta (opcional) */
-.markdown-content .md-code-block::-webkit-scrollbar {
-  height: 8px;
-}
-.markdown-content .md-code-block::-webkit-scrollbar-thumb {
-  background: #3a3a3a;
-  border-radius: 9999px;
-}
-.markdown-content .md-code-block::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* ====== CÓDIGO INLINE ====== */
-.markdown-content .md-inline-code {
-  background: rgba(30, 30, 30, 0.85);
-  color: #ffb86c;
-  border: 1px solid #2b2b2b;
-  border-radius: 6px;
-  padding: 0.15em 0.4em;
-  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.9em;
-
-  /* inline não deve causar overflow da página */
+/* --- Código Inline (<code> que NÃO está dentro de <pre>) --- */
+/* CORREÇÃO: Este seletor complexo garante que estamos estilizando apenas o código inline. */
+.markdown-content :not(pre) > code {
+  background: rgba(29, 59, 83, 0.5);
+  color: #82aaff;
+  border-radius: 5px;
+  padding: 0.2em 0.45em;
+  font-size: 0.88em;
+  font-family: "Fira Code", "JetBrains Mono", monospace;
   white-space: normal;
   word-break: break-word;
-  overflow-wrap: anywhere;
 }
 
-/* ====== AJUSTES CONTRA O TYPOGRAPHY DO TAILWIND ======
-   aumenta a especificidade para garantir que nossos estilos prevaleçam */
-.markdown-content.prose pre {
-  background: #1e1e1e;
-  border-radius: 12px;
-  overflow-x: auto;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  padding: 1rem 1.25rem;
-  border: 1px solid #2b2b2b;
-}
-.markdown-content.prose pre code {
-  background: transparent;
-  padding: 0;
-  color: inherit;
-  font-weight: 400;
-}
-
-/* O highlight.js injeta .hljs; mantemos legado do tema importado */
+/* --- Ajustes para o Highlight.js --- */
+/* Esta regra continua válida e importante */
 .markdown-content .hljs {
-  background: transparent; /* o fundo já é do pre */
+  background: transparent;
   color: inherit;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 640px) {
+  .markdown-content pre {
+    font-size: 0.85rem;
+    margin: 1.5rem 0;
+  }
+  .markdown-content pre > code {
+    padding: 0 1rem 1rem 1rem;
+  }
 }

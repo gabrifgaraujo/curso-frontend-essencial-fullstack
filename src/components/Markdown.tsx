@@ -1,10 +1,17 @@
+// src/components/Markdown.tsx
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
-import "highlight.js/styles/github-dark.css";
-import "../markdown-styles.css"; // Seu CSS customizado para o conteúdo do markdown
+
+// Nossos estilos customizados para o container e layout
+import "../markdown-styles.css";
+import "../markdown-code.css";
+
+// AQUI ESTÁ A CORREÇÃO: Importe um tema de cores do highlight.js
+// que combine com o nosso design.
+import 'highlight.js/styles/night-owl.css';
 
 interface MarkdownProps {
   content: string;

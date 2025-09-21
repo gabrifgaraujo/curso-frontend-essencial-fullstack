@@ -6,15 +6,15 @@ const Summary: React.FC = () => {
   return (
     <>
       <div className="flex gap-3  mb-0">
-        <NavButton to="home" text="Voltar ao Início" type="back" />
-        <NavButton to="home" text="Próximo" type="go" />
+        <NavButton to="/" text="Voltar ao Início" type="back" />
+        <NavButton to="/html/introducao" text="Próximo" type="go" />
       </div>
       <div className="flex flex-col items-center">
         <Markdown content={Sumario as unknown as string} />
       </div>
       <div className="flex gap-3 mb-0">
-        <NavButton to="home" text="Voltar ao Início" type="back" />
-        <NavButton to="home" text="Próximo" type="go" />
+        <NavButton to="/" text="Voltar ao Início" type="back" />
+        <NavButton to="/html/introducao" text="Próximo" type="go" />
       </div>
     </>
   );

@@ -7,6 +7,27 @@
   word-break: break-word;
 }
 
+/* --- Tipografia Base e Ritmo Vertical --- */
+.markdown-content p,
+.markdown-content ul,
+.markdown-content ol,
+.markdown-content blockquote,
+.markdown-content pre,
+.markdown-content table {
+  /* POLIMENTO: Esta margem agora será aplicada de forma consistente. */
+  margin-bottom: 1.5rem; 
+}
+
+.markdown-content p:not(:first-child),
+.markdown-content ul:not(:first-child),
+.markdown-content ol:not(:first-child),
+.markdown-content blockquote:not(:first-child),
+.markdown-content pre:not(:first-child),
+.markdown-content table:not(:first-child),
+.markdown-content hr:not(:first-child) {
+    margin-top: 1.5rem;
+}
+
 /* --- Tipografia Base --- */
 .markdown-content p,
 .markdown-content li {
@@ -14,9 +35,6 @@
   color: #b0bec5;   /* Cinza claro, confortável para os olhos */
 }
 
-.markdown-content p {
-  margin-bottom: 1.25rem;
-}
 
 .markdown-content strong {
   color: #eceff1; /* Branco suave */
@@ -59,6 +77,7 @@
 }
 
 .markdown-content h2 {
+  margin-top: 0;
   font-size: 2rem;
 }
 

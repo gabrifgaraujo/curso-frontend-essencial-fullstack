@@ -9,13 +9,17 @@ interface NavButtonProps {
 }
 
 const NavButton: React.FC<NavButtonProps> = ({ to, text, type }) => {
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth'})
+  }
+
   const baseClasses = "px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center";
   const typeClasses = type === 'back'
     ? "bg-gray-700 hover:bg-gray-600 text-gray-200"
     : "bg-sky-600 hover:bg-sky-500 text-white";
 
   return (
-    <Link to={to} className={`${baseClasses} ${typeClasses}`}>
+    <Link to={to} onClick={handleClick} className={`${baseClasses} ${typeClasses}`}>
       {text}
     </Link>
   );
