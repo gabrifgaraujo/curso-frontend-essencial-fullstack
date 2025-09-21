@@ -1,6 +1,6 @@
 // src/App.tsx
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Summary from './components/Summary';
@@ -41,6 +41,28 @@ import JsEventosPratica from './pages/javascript/14-js';
 import JsCriandoRemovendo from './pages/javascript/15-js';
 import JsProjeto from './pages/javascript/PROJETO-todo-list';
 
+function RedirectHandler() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Verifica se há uma rota de redirecionamento salva
+    const redirectRoute = sessionStorage.getItem('redirect');
+    if (redirectRoute) {
+      // Remove a informação para não redirecionar novamente em futuros reloads
+      sessionStorage.removeItem('redirect');
+      
+      // Extrai o nome do repositório para que a navegação funcione corretamente
+      const repoName = '/' + window.location.pathname.split('/')[1];
+      const targetPath = redirectRoute.replace(repoName, '');
+
+      // Navega para a rota correta dentro do React Router
+      navigate(targetPath, { replace: true });
+    }
+  }, [navigate]);
+
+  return null;
+}
+
 // Hook para salvar a última rota visitada
 function SaveLastRoute() {
   const location = useLocation();
@@ -54,6 +76,7 @@ function App() {
   return (
     <BrowserRouter basename="/curso-frontend-essencial/">
       <SaveLastRoute />
+      <RedirectHandler />
       <div className="min-h-screen bg-gray-900 text-gray-300 font-sans">
         <Header />
         <main className="container mx-auto px-4 pt-28 pb-16">
