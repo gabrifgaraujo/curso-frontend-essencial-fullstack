@@ -1,4 +1,3 @@
-// src/App.tsx
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Header from './components/Header';
@@ -6,7 +5,6 @@ import Home from './pages/Home';
 import Summary from './components/Summary';
 import Sobre from './components/Sobre';
 
-// Importando as páginas de conteúdo
 import HtmlIntro from './pages/html/01-html';
 import HtmlPrimeiroDoc from './pages/html/02-html';
 import HtmlEstrutura from './pages/html/03-html';
@@ -39,6 +37,17 @@ import JsManipulandoEstilos from './pages/javascript/12-js';
 import JsEventos from './pages/javascript/13-js';
 import JsEventosPratica from './pages/javascript/14-js';
 import JsCriandoRemovendo from './pages/javascript/15-js';
+import JsArrowFunctions from './pages/javascript/16-js'
+import JsDesestruturacao from './pages/javascript/17-js'
+import JsRestSpread from './pages/javascript/18-js'
+import JsMapFilterReduce from './pages/javascript/19-js'
+import JsClasses from './pages/javascript/20-js'
+import JsHoisting from './pages/javascript/21-js'
+import JsCallbacks from './pages/javascript/22-js'
+import JsPromises from './pages/javascript/23-js'
+import JsFetch from './pages/javascript/24-js'
+import JsAsyncAwait from './pages/javascript/25-js'
+import JsModulos from './pages/javascript/26-js'
 import JsProjeto from './pages/javascript/PROJETO-todo-list';
 
 function RedirectHandler() {
@@ -120,8 +129,18 @@ function App() {
             <Route path="/js/eventos" element={<JsEventos />} />
             <Route path="/js/eventos-pratica" element={<JsEventosPratica />} />
             <Route path="/js/criando-removendo-elementos" element={<JsCriandoRemovendo />} />
+            <Route path="/js/arrow-functions" element={<JsArrowFunctions />} />
+            <Route path="/js/desestruturacao" element={<JsDesestruturacao />} />
+            <Route path="/js/rest-spread" element={<JsRestSpread />} />
+            <Route path="/js/map-filter-reduce" element={<JsMapFilterReduce />} />
+            <Route path="/js/classes" element={<JsClasses />} />
+            <Route path="/js/hoisting" element={<JsHoisting />} />
+            <Route path="/js/callbacks" element={<JsCallbacks />} />
+            <Route path="/js/promises" element={<JsPromises />} />
+            <Route path="/js/fetch" element={<JsFetch />} />
+            <Route path="/js/async-await" element={<JsAsyncAwait />} />
+            <Route path="/js/modulos" element={<JsModulos />} />
             <Route path="/js/projeto-lista-tarefas" element={<JsProjeto />} />
-
             <Route path="*" element={<div className="text-center text-red-500 text-2xl">Página não encontrada</div>} />
           </Routes>
         </main>

@@ -8,7 +8,7 @@ const JsCriandoRemovendo: React.FC = () => {
       content={content}
       backRoute="/js/eventos-pratica"
       backText="Voltar: Objeto de Evento"
-      goRoute="/js/projeto-lista-tarefas"
+      goRoute="/js/arrow-functions"
       goText="Próximo: Projeto Prático"
     />
   );
