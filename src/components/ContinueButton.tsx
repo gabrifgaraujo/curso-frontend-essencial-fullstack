@@ -1,4 +1,3 @@
-// components/ContinueButton.tsx
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa";
 import React from 'react';

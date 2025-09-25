@@ -1,7 +1,8 @@
 // src/pages/Home.tsx
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaPlay, FaRocket, FaBookOpen } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaBookOpen, FaNodeJs } from 'react-icons/fa';
+import { SiTypescript } from 'react-icons/si';
 
 // Dados dos módulos para fácil manutenção
 const modules = [
@@ -38,6 +39,39 @@ const modules = [
       "Eventos e interatividade",
     ],
   },
+  {
+    title: "4. TypeScript Essencial",
+    icon: <SiTypescript className="text-sky-500" />,
+    link: "/ts/introducao",
+    topics: [
+      "Introdução ao TypeScript",
+      "Tipagem estática e segurança",
+      "Interfaces e Generics",
+      "Configuração de ambiente",
+    ],
+  },
+  {
+    title: "5. React com TypeScript",
+    icon: <FaReact className="text-cyan-400" />,
+    link: "/react/introducao",
+    topics: [
+      "Componentes e Props",
+      "Hooks e gerenciamento de estado",
+      "Roteamento e consumo de APIs",
+      "Testes e build para produção",
+    ],
+  },
+  {
+    title: "6. Node.js Essencial",
+    icon: <FaNodeJs className="text-green-500" />,
+    link: "/node/introducao",
+    topics: [
+      "O que é Node.js e como funciona",
+      "Gerenciamento de pacotes com NPM",
+      "Módulos e sistema de arquivos",
+      "Criação de APIs com Express",
+    ],
+  },
 ];
 
 const Home: React.FC = () => {
@@ -65,21 +99,22 @@ const Home: React.FC = () => {
           <FaBookOpen className="text-sky-400" size={40} />
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          Guia Completo de Frontend Essencial
+          Guia Completo de Frontend + Node Essencial
         </h1>
         <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10">
-          Um guia abrangente para iniciar no desenvolvimento web, dominando HTML, CSS e JavaScript para construir suas primeiras aplicações.
+          Um guia abrangente para iniciar no desenvolvimento web, dominando
+          HTML, CSS, JavaScript, TypeScript, React e Node.js para construir aplicações modernas
+          e escaláveis.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Link 
-            to="/summary" 
+          <Link
+            to="/summary"
             className="flex items-center gap-2 bg-sky-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-sky-500 transition-transform transform hover:scale-105"
           >
-            <FaPlay />
             Começar a Aprender
           </Link>
           {lastRoute && (
-            <button 
+            <button
               onClick={handleContinue}
               className="bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition-transform transform hover:scale-105"
             >
@@ -91,8 +126,8 @@ const Home: React.FC = () => {
 
       {/* Links Rápidos para Módulos */}
       <section className="flex flex-wrap justify-center gap-3 md:gap-4">
-        {modules.map(mod => (
-          <Link 
+        {modules.map((mod) => (
+          <Link
             key={mod.title}
             to={mod.link}
             className="flex items-center gap-2 bg-gray-800/80 hover:bg-gray-700 text-gray-300 font-semibold py-2 px-4 rounded-full transition-all"
@@ -106,9 +141,9 @@ const Home: React.FC = () => {
       {/* Grid de Módulos */}
       <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {modules.map((mod) => (
-          <Link 
-            to={mod.link} 
-            key={mod.title} 
+          <Link
+            to={mod.link}
+            key={mod.title}
             className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 hover:border-sky-500/50 hover:-translate-y-1 transition-all duration-300"
           >
             <div className="flex items-center gap-4 mb-4">
@@ -118,7 +153,9 @@ const Home: React.FC = () => {
               <h3 className="text-xl font-bold text-white">{mod.title}</h3>
             </div>
             <ul className="space-y-2 list-disc list-inside text-gray-400">
-              {mod.topics.map(topic => <li key={topic}>{topic}</li>)}
+              {mod.topics.map((topic) => (
+                <li key={topic}>{topic}</li>
+              ))}
             </ul>
           </Link>
         ))}

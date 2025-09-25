@@ -8,8 +8,8 @@ const JsModulos: React.FC = () => {
       content={content}
       backRoute="/js/async-await"
       backText="Voltar: Async/Await"
-      goRoute="/summary" // Finaliza o curso
-      goText="Finalizar Curso"
+      goRoute="/ts/introducao"
+      goText="TypeScript"
     />
   );
 };

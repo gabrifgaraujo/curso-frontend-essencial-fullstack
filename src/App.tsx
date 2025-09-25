@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Summary from './components/Summary';
 import Sobre from './components/Sobre';
 
+// HTML
 import HtmlIntro from './pages/html/01-html';
 import HtmlPrimeiroDoc from './pages/html/02-html';
 import HtmlEstrutura from './pages/html/03-html';
@@ -12,6 +13,7 @@ import HtmlLinksImagens from './pages/html/04-html';
 import HtmlSemantico from './pages/html/05-html';
 import HtmlProjeto from './pages/html/PROJETO-blog';
 
+// CSS
 import CssIntro from './pages/css/01-css';
 import CssSeletores from './pages/css/02-css';
 import CssBoxModel from './pages/css/03-css';
@@ -22,6 +24,7 @@ import CssFlexContainer from './pages/css/07-css';
 import CssFlexItems from './pages/css/08-css';
 import CssProjeto from './pages/css/PROJETO-estilizando-blog';
 
+// JavaScript
 import JsIntro from './pages/javascript/01-js';
 import JsVariaveis from './pages/javascript/02-js';
 import JsOperadores from './pages/javascript/03-js';
@@ -49,6 +52,40 @@ import JsFetch from './pages/javascript/24-js'
 import JsAsyncAwait from './pages/javascript/25-js'
 import JsModulos from './pages/javascript/26-js'
 import JsProjeto from './pages/javascript/PROJETO-todo-list';
+
+// TypeScript
+import TsIntro from './pages/typescript/01-ts';
+import TiposBasicos from './pages/typescript/02-ts'
+import ObjetosEFuncoes from './pages/typescript/03-ts'
+import Interfaces from './pages/typescript/04-ts'
+import Generics from './pages/typescript/05-ts'
+import TiposAvancados from './pages/typescript/06-ts'
+import Modulos from './pages/typescript/07-ts'
+import TypescriptReact from './pages/typescript/08-ts'
+import ConsumoAPI from './pages/typescript/09-ts'
+import Testes from './pages/typescript/10-ts'
+import TsProjeto from './pages/typescript/11-ts'
+
+// React
+import ReactIntro from './pages/react/01-react';
+import ReactFundamentos from './pages/react/02-react';
+import ReactHooks from './pages/react/03-react';
+import ReactRoteamento from './pages/react/04-react';
+import ReactGerenciamentoEstado from './pages/react/05-react';
+import ReactConsumoApi from './pages/react/06-react';
+import ReactEstilizacao from './pages/react/07-react';
+import ReactTestes from './pages/react/08-react';
+import ReactBuildVite from './pages/react/09-react';
+import ReactProjetoPratico from './pages/react/10-react';
+import ReactDicasVaga from './pages/react/11-react';
+
+// Node
+import NodeIntro from './pages/node/01-node';
+import NodeFundamentos from './pages/node/02-node';
+import NodeFrameworks from './pages/node/03-node';
+import BancodeDados from './pages/node/04-node';
+import BoasPraticas from './pages/node/05-node';
+import Deploy from './pages/node/06-node';
 
 function RedirectHandler() {
   const navigate = useNavigate();
@@ -141,6 +178,41 @@ function App() {
             <Route path="/js/async-await" element={<JsAsyncAwait />} />
             <Route path="/js/modulos" element={<JsModulos />} />
             <Route path="/js/projeto-lista-tarefas" element={<JsProjeto />} />
+
+            {/* Rotas de TypeScript */}
+            <Route path="/ts/introducao" element={<TsIntro />} />
+            <Route path="/ts/tipos-basicos" element={<TiposBasicos />} />
+            <Route path="/ts/objetos-e-funcoes" element={<ObjetosEFuncoes />} />
+            <Route path="/ts/interfaces" element={<Interfaces />} />
+            <Route path="/ts/generics" element={<Generics />} />
+            <Route path="/ts/tipos-avancados" element={<TiposAvancados />} />
+            <Route path="/ts/modulos" element={<Modulos />} />
+            <Route path="/ts/typescript-com-react" element={<TypescriptReact />} />
+            <Route path="/ts/consumo-de-api" element={<ConsumoAPI />} />
+            <Route path="/ts/testes" element={<Testes />} />
+            <Route path="/ts/projeto-typescript" element={<TsProjeto />} />
+
+            {/* Rotas de React */}
+            <Route path="/react/introducao" element={<ReactIntro />} />
+            <Route path="/react/fundamentos" element={<ReactFundamentos />} />
+            <Route path="/react/hooks" element={<ReactHooks />} />
+            <Route path="/react/roteamento" element={<ReactRoteamento />} />
+            <Route path="/react/gerenciamento-estado" element={<ReactGerenciamentoEstado />} />
+            <Route path="/react/consumo-api" element={<ReactConsumoApi />} />
+            <Route path="/react/estilizacao" element={<ReactEstilizacao />} />
+            <Route path="/react/testes" element={<ReactTestes />} />
+            <Route path="/react/build-vite" element={<ReactBuildVite />} />
+            <Route path="/react/projeto-pratico" element={<ReactProjetoPratico />} />
+            <Route path="/react/dicas-vaga" element={<ReactDicasVaga />} />
+
+            {/* Rotas de React */}
+            <Route path="/node/introducao" element={<NodeIntro />} />
+            <Route path="/node/fundamentos" element={<NodeFundamentos />} />
+            <Route path="/node/frameworks" element={<NodeFrameworks />} />
+            <Route path="/node/banco-de-dados" element={<BancodeDados />} />
+            <Route path="/node/boas-praticas" element={<BoasPraticas />} />
+            <Route path="/node/deploy" element={<Deploy />} />
+
             <Route path="*" element={<div className="text-center text-red-500 text-2xl">Página não encontrada</div>} />
           </Routes>
         </main>

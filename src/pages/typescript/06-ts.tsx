@@ -1,0 +1,17 @@
+import React from 'react';
+import ContentPage from '../../components/ContentPage';
+import content from '/public/04-typescript/06-ts.md?raw';
+
+const TiposAvancados: React.FC = () => {
+  return (
+    <ContentPage
+      content={content}
+      backRoute="/ts/generics"
+      backText="Voltar: Generics"
+      goRoute="/ts/modulos"
+      goText="Próximo: Módulos"
+    />
+  );
+};
+
+export default TiposAvancados;
