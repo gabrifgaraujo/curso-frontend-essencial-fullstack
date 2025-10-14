@@ -60,7 +60,7 @@ npm run deploy
 ## 🌍 Deploy
 
 O projeto é publicado automaticamente no GitHub Pages:
-👉 [Acessar Site](https://github.com/gabrifgaraujo/curso-frontend-essencial)
+👉 [Acessar Site](https://gabrifgaraujo.github.io/curso-frontend-essencial/)
 
 ## 🚧 Roadmap
 
