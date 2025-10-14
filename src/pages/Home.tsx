@@ -1,7 +1,7 @@
 // src/pages/Home.tsx
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaBookOpen, FaNodeJs } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaBookOpen, FaNodeJs, FaLaptopCode } from 'react-icons/fa';
 import { SiTypescript } from 'react-icons/si';
 
 // Dados dos módulos para fácil manutenção
@@ -37,6 +37,17 @@ const modules = [
       "Funções e estruturas de controle",
       "Manipulação de elementos (DOM)",
       "Eventos e interatividade",
+    ],
+  },
+  {
+    title: "4. Estrutura de Dados e Algoritmos",
+    icon: <FaLaptopCode className="text-blue-400" />,
+    link: "/algoritmos/introducao",
+    topics: [
+      "Algoritmos básicos e complexidade",
+      "Estruturas de dados Lineares e não lineares",
+      "Algoritmos de Busca e Ordenação",
+      "Noções de Arquitetura de Software",
     ],
   },
   {

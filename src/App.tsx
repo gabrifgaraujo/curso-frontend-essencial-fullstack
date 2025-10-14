@@ -53,6 +53,14 @@ import JsAsyncAwait from './pages/javascript/25-js'
 import JsModulos from './pages/javascript/26-js'
 import JsProjeto from './pages/javascript/PROJETO-todo-list';
 
+// Algoritmos
+import IntroducaoAlgoritmos from './pages/algoritmos/01-algoritmos'
+import EstruturasLineares from './pages/algoritmos/02-algoritmos'
+import NaoLineares from './pages/algoritmos/03-algoritmos'
+import BuscaEOrdenacao from './pages/algoritmos/04-algoritmos'
+import Arquitetura from './pages/algoritmos/05-algoritmos'
+import ProjetoAlgoritmos from './pages/algoritmos/PROJETO-algoritmos'
+
 // TypeScript
 import TsIntro from './pages/typescript/01-ts';
 import TiposBasicos from './pages/typescript/02-ts'
@@ -178,6 +186,14 @@ function App() {
             <Route path="/js/async-await" element={<JsAsyncAwait />} />
             <Route path="/js/modulos" element={<JsModulos />} />
             <Route path="/js/projeto-lista-tarefas" element={<JsProjeto />} />
+
+            {/* Rotas de Algoritmos*/}
+            <Route path="/algoritmos/introducao" element={<IntroducaoAlgoritmos />} />
+            <Route path="/algoritmos/estruturas-lineares" element={<EstruturasLineares />} />
+            <Route path="/algoritmos/estruturas-nao-lineares" element={<NaoLineares />} />
+            <Route path="/algoritmos/busca-e-ordenacao" element={<BuscaEOrdenacao />} />
+            <Route path="/algoritmos/arquitetura" element={<Arquitetura />} />
+            <Route path="/algoritmos/projeto-algoritmos" element={<ProjetoAlgoritmos />} />
 
             {/* Rotas de TypeScript */}
             <Route path="/ts/introducao" element={<TsIntro />} />

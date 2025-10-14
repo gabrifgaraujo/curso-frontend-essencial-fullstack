@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentPage from '../../components/ContentPage';
-import content from '/public/05-react/08-react.md?raw';
+import content from '../../assets/05-react/08-react.md?raw';
 
 const ReactTestes: React.FC = () => {
   return (

@@ -56,7 +56,20 @@ Adicione interatividade e dinamismo às suas aplicações. Aprenda a lógica de 
 
 ---
 
-## Módulo 4: TypeScript - Tipagem Segura e Produtividade
+## Módulo 4: Arquitetura, Estruturas de Dados e Algoritmos
+
+Eleve seu conhecimento de "construtor de páginas" para "engenheiro de software", preparando-o para resolver problemas complexos e construir aplicações escaláveis.
+
+*   [**Aula 1:** Introdução à Complexidade de Algoritmos](/curso-frontend-essencial/algoritmos/introducao)
+*   [**Aula 2:** Estruturas de Dados Lineares](/curso-frontend-essencial/algoritmos/estruturas-lineares)
+*   [**Aula 3:** Estruturas de Dados Não Lineares](/curso-frontend-essencial/algoritmos/estruturas-nao-lineares)
+*   [**Aula 4:** Algoritmos de Busca e Ordenação](/curso-frontend-essencial/algoritmos/busca-e-ordenacao)
+*   [**Aula 5:** Princípios de Arquitetura de Software](/curso-frontend-essencial/algoritmos/arquitetura)
+*   [**Projeto Prático:** Refatorando a Lista de Tarefas](/curso-frontend-essencial/algoritmos/projeto-algoritmos)
+
+---
+
+## Módulo 5: TypeScript - Tipagem Segura e Produtividade
 
 Melhore sua produtividade e evite erros comuns com TypeScript, adicionando tipagem estática ao JavaScript.
 
@@ -71,7 +84,7 @@ Melhore sua produtividade e evite erros comuns com TypeScript, adicionando tipag
 
 ---
 
-## Módulo 5: React com TypeScript - Construindo Interfaces Modernas
+## Módulo 6: React com TypeScript - Construindo Interfaces Modernas
 
 Aprenda a biblioteca de UI mais popular do mercado. Crie componentes reutilizáveis, gerencie o estado da aplicação e construa SPAs (Single Page Applications) robustas com React e TypeScript.
 
@@ -87,7 +100,9 @@ Aprenda a biblioteca de UI mais popular do mercado. Crie componentes reutilizáv
 *   [**Aula 10:** Projeto Prático: TodoList com TypeScript](/curso-frontend-essencial/react/projeto-pratico)
 *   [**Aula 11:** Dicas para Conseguir uma Vaga de Desenvolvedor React](/curso-frontend-essencial/react/dicas-vaga)
 
-## Módulo 6: Node.js - Backend para Frontend
+---
+
+## Módulo 7: Node.js - Backend para Frontend
 Aprenda a construir servidores, APIs e conectar o frontend ao backend.
 - [Aula 1: Introdução ao Node.js](/curso-frontend-essencial/node/introducao)  
 - [Aula 2: Fundamentos do Node.js](/curso-frontend-essencial/node/fundamentos)  

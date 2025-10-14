@@ -1,7 +1,6 @@
 import React from 'react';
 import ContentPage from '../../components/ContentPage';
-// CORREÇÃO: Caminho do import atualizado
-import content from '/public/01-html-essencial/01-html.md?raw';
+import content from '../../assets/01-html-essencial/01-html.md?raw';
 
 const HtmlIntro: React.FC = () => {
   return (

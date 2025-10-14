@@ -1,4 +1,4 @@
-import Sumario from '../../public/sumario.md';
+import Sumario from '../assets/sumario.md';
 import Markdown from "./Markdown";
 import NavButton from '../components/NavButton';
 import ContentPage from './ContentPage';

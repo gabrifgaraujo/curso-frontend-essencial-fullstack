@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentPage from '../../components/ContentPage';
-import content from '/public/02-css-essencial/05-css.md?raw';
+import content from '../../assets/02-css-essencial/05-css.md?raw';
 
 const CssTextos: React.FC = () => {
   return (

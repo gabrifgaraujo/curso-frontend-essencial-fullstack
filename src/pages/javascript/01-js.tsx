@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentPage from '../../components/ContentPage';
-import content from '/public/03-javascript/01-js.md?raw';
+import content from '../../assets/03-javascript/01-js.md?raw';
 
 const JsIntro: React.FC = () => {
   return (

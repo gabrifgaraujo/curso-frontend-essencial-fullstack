@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentPage from '../../components/ContentPage';
-import content from '/public/02-css-essencial/PROJETO-estilizando-blog.md?raw';
+import content from '../../assets/02-css-essencial/PROJETO-estilizando-blog.md?raw';
 
 const CssProjeto: React.FC = () => {
   return (
