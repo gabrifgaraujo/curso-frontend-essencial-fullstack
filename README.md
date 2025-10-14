@@ -1,44 +1,71 @@
-# 🚀 Projeto do Curso React | ReactMastery
+# 🚀 Curso Frontend Essencial | ReactMastery
 
 <div align="start">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
   <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
 </div>
 
-## ✨ Sobre o Projeto
-Um aplicativo web moderno desenvolvido para ensinar React, implementando conceitos fundamentais como:
+Plataforma interativa de aprendizado desenvolvida em React + Vite, com conteúdo 100% modular e dinâmico — os arquivos `.md` são convertidos em tempo real para HTML com React Markdown + Rehype, garantindo performance e flexibilidade máxima.
 
-- ⚛️ Componentização
-- 🔁 React Hooks
-- 🌐 React Router
-- 🧩 APIs externas
-- 📱 Layout responsivo
+## ✨ Visão Geral
 
-## 🛠️ Tecnologias Utilizadas
-| Ferramenta          | Descrição                                |
-|---------------------|------------------------------------------|
-| **React 18**        | Biblioteca principal para construção de UI |
-| **Vite**            | Build tool e servidor de desenvolvimento |
-| **React Router v6** | Navegação entre páginas                  |
-| **Styled Components**| Estilização com CSS-in-JS               |
+O Curso Frontend Essencial é um projeto open source focado em ensinar React de forma moderna, limpa e escalável.
+Cada módulo é construído para demonstrar na prática os pilares da stack frontend atual.
 
-## 🌱 Próximos Passos
-- Adicionar internacionalização (i18n)
-- Implementar TypeScript
-- Criar versão PWA
-- Adicionar testes end-to-end
+## 🧠 Conceitos abordados
 
-# React + Vite
+-   ⚛️ Componentização e Hooks
+-   🧩 Reuso e arquitetura de componentes
+-   🌐 Navegação com React Router
+-   🪄 Renderização dinâmica de Markdown
+-   📱 Layout responsivo com TailwindCSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🛠️ Tecnologias Principais
 
-Currently, two official plugins are available:
+| Ferramenta | Finalidade |
+| :--- | :--- |
+| **React 19** | Criação de interfaces dinâmicas e reativas |
+| **Vite** | Build rápido e servidor de desenvolvimento |
+| **TypeScript** | Tipagem estática e produtividade |
+| **React Router v7** | Gerenciamento de rotas e navegação |
+| **Styled Components** | Estilização com CSS-in-JS |
+| **TailwindCSS** | Utilitários para design responsivo |
+| **Rehype + Remark** | Conversão e renderização de Markdown |
+| **Highlight.js** | Sintaxe colorida para blocos de código |
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ Executando o Projeto
 
-## Expanding the ESLint configuration
+```bash
+# Clonar o repositório
+git clone https://github.com/gabrifgaraujo/curso-frontend-essencial
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Entrar na pasta
+cd curso-frontend-essencial
+
+# Instalar dependências
+npm install
+
+# Rodar em modo de desenvolvimento
+npm run dev
+
+# Gerar build de produção
+npm run build
+
+# Deploy manual no GitHub Pages
+npm run deploy
+```
+
+## 🌍 Deploy
+
+O projeto é publicado automaticamente no GitHub Pages:
+👉 [Acessar Site](https://github.com/gabrifgaraujo/curso-frontend-essencial)
+
+## 🚧 Roadmap
+
+-   [ ] Sistema de busca nos módulos
+-   [ ] Adicionar internacionalização (i18n)
+-   [ ] Implementar modo PWA
+-   [ ] Adicionar testes unitários e E2E
+-   [ ] Painel de progresso do aluno
