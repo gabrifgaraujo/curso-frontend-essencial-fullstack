@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentPage from '../../components/ContentPage';
-import content from '../../assets/05-react/11-react.md?raw';
+import content from '../../assets/06-react/11-react.md?raw';
 
 const ReactDicasVaga: React.FC = () => {
   return (
@@ -8,8 +8,8 @@ const ReactDicasVaga: React.FC = () => {
       content={content}
       backRoute="/react/projeto-pratico"
       backText="Voltar: Projeto Prático"
-      goRoute="/node/introducao"
-      goText="Próximo: Introdução ao NodeJS"
+      goRoute="/ux/introducao"
+      goText="Próximo: Introdução ao UX"
     />
   );
 };

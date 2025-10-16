@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentPage from '../../components/ContentPage';
-import content from '../../assets/05-react/10-react.md?raw';
+import content from '../../assets/06-react/10-react.md?raw';
 
 const ReactProjetoPratico: React.FC = () => {
   return (

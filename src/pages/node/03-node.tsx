@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentPage from '../../components/ContentPage';
-import content from '../../assets/06-node/03-node.md?raw';
+import content from '../../assets/09-node/03-node.md?raw';
 
 const NodeFrameworks: React.FC = () => {
   return (

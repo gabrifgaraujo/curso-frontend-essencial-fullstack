@@ -1,4 +1,3 @@
-// src/components/ContentPage.tsx
 import React from 'react';
 import Markdown from './Markdown';
 import NavButton from './NavButton';

@@ -6,8 +6,8 @@ const JsArrowFunctions: React.FC = () => {
   return (
     <ContentPage
       content={content}
-      backRoute="/js/projeto-lista-tarefas"
-      backText="Voltar: Projeto To-Do"
+      backRoute="/js/criando-removendo-elementos"
+      backText="Voltar: Criando e Removendo Elementos"
       goRoute="/js/desestruturacao"
       goText="Próximo: Desestruturação"
     />

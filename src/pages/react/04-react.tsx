@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentPage from '../../components/ContentPage';
-import content from '../../assets/05-react/04-react.md?raw';
+import content from '../../assets/06-react/04-react.md?raw';
 
 const ReactRoteamento: React.FC = () => {
   return (

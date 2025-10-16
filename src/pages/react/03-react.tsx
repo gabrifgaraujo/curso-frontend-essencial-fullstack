@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentPage from '../../components/ContentPage';
-import content from '../../assets/05-react/03-react.md?raw';
+import content from '../../assets/06-react/03-react.md?raw';
 
 const ReactHooks: React.FC = () => {
   return (

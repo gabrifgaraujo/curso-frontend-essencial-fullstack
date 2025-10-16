@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter, useLocation, useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Summary from './components/Summary';
@@ -87,6 +87,27 @@ import ReactBuildVite from './pages/react/09-react';
 import ReactProjetoPratico from './pages/react/10-react';
 import ReactDicasVaga from './pages/react/11-react';
 
+//UX
+import UxIntro from './pages/ux/01-ux';
+import PrincipiosUX from './pages/ux/02-ux';
+import ArquiteturaUX from './pages/ux/03-ux';
+import Gestalt from './pages/ux/04-ux';
+import TipografiaUX from './pages/ux/05-ux';
+import ProtoUX from './pages/ux/06-ux';
+import NielsenUX from './pages/ux/07-ux';
+import DesignThinking from './pages/ux/08-ux';
+import Acessibilidade from './pages/ux/09-ux';
+import EmocionalUX from './pages/ux/10-ux';
+
+//Web Services
+import WebServicesIntro from './pages/webServices/01-ws';
+import RestWS from './pages/webServices/02-ws';
+import Requisicoes from './pages/webServices/03-ws';
+import WSConsumoAPI from './pages/webServices/04-ws';
+import EnviandoDados from './pages/webServices/05-ws';
+import Erros from './pages/webServices/06-ws';
+import Autenticacao from './pages/webServices/07-ws';
+
 // Node
 import NodeIntro from './pages/node/01-node';
 import NodeFundamentos from './pages/node/02-node';
@@ -94,6 +115,17 @@ import NodeFrameworks from './pages/node/03-node';
 import BancodeDados from './pages/node/04-node';
 import BoasPraticas from './pages/node/05-node';
 import Deploy from './pages/node/06-node';
+
+// Metodos Ágeis
+import AgeisIntro from './pages/MetodosAgeis/01-ma';
+import MetodosAgeis from './pages/MetodosAgeis/02-ma';
+import SCRUM from './pages/MetodosAgeis/03-ma';
+
+// IA
+import IntroIA from './pages/IA/01-ia';
+import Produtividade from './pages/IA/02-ia';
+import Prompt from './pages/IA/03-ia';
+import UsoEtico from './pages/IA/04-ia';
 
 function RedirectHandler() {
   const navigate = useNavigate();
@@ -128,7 +160,7 @@ function SaveLastRoute() {
 
 function App() {
   return (
-    <BrowserRouter basename="/curso-frontend-essencial/">
+    <HashRouter>
       <SaveLastRoute />
       <RedirectHandler />
       <div className="min-h-screen bg-gray-900 text-gray-300 font-sans">
@@ -221,7 +253,28 @@ function App() {
             <Route path="/react/projeto-pratico" element={<ReactProjetoPratico />} />
             <Route path="/react/dicas-vaga" element={<ReactDicasVaga />} />
 
-            {/* Rotas de React */}
+            {/* Rotas de UX */}
+            <Route path="/ux/introducao" element={<UxIntro />} />
+            <Route path="/ux/principios" element={<PrincipiosUX />} />
+            <Route path="/ux/arquitetura" element={<ArquiteturaUX />} />
+            <Route path="/ux/lei-de-gestalt" element={<Gestalt />} />
+            <Route path="/ux/tipografia" element={<TipografiaUX />} />
+            <Route path="/ux/prototipagem" element={<ProtoUX />} />
+            <Route path="/ux/nielsen" element={<NielsenUX />} />
+            <Route path="/ux/design-thinking" element={<DesignThinking />} />
+            <Route path="/ux/acessibilidade" element={<Acessibilidade />} />
+            <Route path="/ux/design-emocional" element={<EmocionalUX />} />
+
+            {/* Rotas de Web Services */}
+            <Route path="/ws/introducao" element={<WebServicesIntro />} />
+            <Route path="/ws/rest" element={<RestWS />} />
+            <Route path="/ws/requisicoes" element={<Requisicoes />} />
+            <Route path="/ws/consumo-de-api" element={<WSConsumoAPI />} />
+            <Route path="/ws/enviando-dados" element={<EnviandoDados />} />
+            <Route path="/ws/tratamento-de-erros" element={<Erros />} />
+            <Route path="/ws/autenticacao" element={<Autenticacao />} />
+
+            {/* Rotas de Node */}
             <Route path="/node/introducao" element={<NodeIntro />} />
             <Route path="/node/fundamentos" element={<NodeFundamentos />} />
             <Route path="/node/frameworks" element={<NodeFrameworks />} />
@@ -229,11 +282,22 @@ function App() {
             <Route path="/node/boas-praticas" element={<BoasPraticas />} />
             <Route path="/node/deploy" element={<Deploy />} />
 
+            {/* Rotas de Métodos Ágeis */}
+            <Route path="/ma/introducao" element={<AgeisIntro />} />
+            <Route path="/ma/metodos-ageis" element={<MetodosAgeis />} />
+            <Route path="/ma/scrum" element={<SCRUM />} />
+
+            {/* Rotas de IA */}
+            <Route path="/ia/introducao" element={<IntroIA />} />
+            <Route path="/ia/produtividade" element={<Produtividade />} />
+            <Route path="/ia/engenharia-de-prompt" element={<Prompt />} />
+            <Route path="/ia/uso-etico" element={<UsoEtico />} />
+
             <Route path="*" element={<div className="text-center text-red-500 text-2xl">Página não encontrada</div>} />
           </Routes>
         </main>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

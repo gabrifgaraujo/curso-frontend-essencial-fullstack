@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentPage from '../../components/ContentPage';
-import content from '../../assets/05-react/02-react.md?raw';
+import content from '../../assets/06-react/02-react.md?raw';
 
 const ReactFundamentos: React.FC = () => {
   return (

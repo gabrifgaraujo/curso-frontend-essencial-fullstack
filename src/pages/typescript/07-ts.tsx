@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentPage from '../../components/ContentPage';
-import content from '../../assets/04-typescript/07-ts.md?raw';
+import content from '../../assets/05-typescript/07-ts.md?raw';
 
 const Modulos: React.FC = () => {
   return (
