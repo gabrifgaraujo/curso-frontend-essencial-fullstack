@@ -10,7 +10,7 @@
     <!-- =================================================================== -->
 
     <!-- Título principal que aparece na aba e nos resultados de busca -->
-    <title>Frontend Essencial: O Guia Completo de HTML, CSS e JS</title>
+    <title>Curso de Frontend Essencial - Fullstack (com XP e Ranking)</title>
 
     <!-- Descrição curta do site (importante para SEO) -->
     <meta name="description" content="Aprenda desenvolvimento web do zero com um guia prático e direto ao ponto sobre HTML, CSS e JavaScript. Ideal para iniciantes." />
@@ -36,7 +36,35 @@
 
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="auth-container">
+        <section id="auth-section">
+          <h2>Autenticação</h2>
+          <p id="message-area" style="display: none;"></p>
+          <form id="auth-form" data-mode="register">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <button type="submit">Registrar</button>
+          </form>
+          <a href="#" id="auth-toggle">Já tem conta? Faça Login</a>
+        </section>
+
+        <section id="profile-container" style="display: none;">
+          <h2>Seu Perfil</h2>
+          <!-- O perfil do usuário será injetado aqui -->
+          <button id="logout-button">Sair</button>
+        </section>
+
+        <aside id="ranking-list">
+          <!-- Ranking será injetado aqui -->
+        </aside>
+      </div>
+
+      <div id="course-content">
+        <!-- Conteúdo original do curso -->
+        <div id="root"></div>
+        <button id="add-xp-button" style="display: none;">Completar Lição e Ganhar 25 XP</button>
+      </div>
+    <script type="module" src="/src/api.js"></script>
+    <script type="module" src="/src/auth.js"></script>
   </body>
 </html>
